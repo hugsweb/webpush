@@ -278,6 +278,6 @@ class WebPushMessage
      */
     public function toArray()
     {
-        return Arr::except(array_filter(get_object_vars($this)), ['options']);
+        return ['notification' => Arr::except(array_filter(get_object_vars($this)), ['options'])];
     }
 }
